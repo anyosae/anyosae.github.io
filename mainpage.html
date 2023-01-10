@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hold'em Casinos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+<script>
+    function loginSuccess() {
+      alert("You Are Logged In!");
+    }
+    </script>
+<script src="js/form-validation.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">Hold'em Casinos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#games">Games</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutus">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contactus">Contact Us</a>
+              </li>
+          </ul>
+         
+        </div>
+      </nav>
+    <div id="home" class="container">
+        <div class="row">
+         
+                <div class="container h-100">  
+                  <div class="row d-flex justify-content-center align-items-center h-100">  
+                    <div class="col-xl-9">  
+                      <h1 class="text-black mb-4"> Login</h1>  
+
+                       
+                          <hr class="mx-n3">  
+                          <div class="row align-items-center py-3">  
+                            <div class="col-md-3 ps-5">  
+                              <h6 class="mb-0"> Email address </h6>  
+                            </div>  
+                            <div class="col-md-9 pe-5">  
+                              <input type="email" class="form-control form-control-lg" placeholder="example@example.com" />  
+                            </div>  
+                          </div>  
+                  <hr class="mx-n3">  
+                          <div class="row align-items-center py-3">  
+                            <div class="col-md-3 ps-5">  
+                              <h6 class="mb-0"> Password</h6>  
+                            </div>  
+                            <div class="col-md-9 pe-5">  
+                              <input type="password" class="form-control input-lg" name="password"/>
+                          </div>  
+                          <hr class="mx-n3">  
+                          <div class="row align-items-center py-3">  
+                            
+                          
+                          </div>  
+
+                          <div class="px-5 py-4">  
+                            <button type="submit" class="btn btn-primary btn-lg" onclick="loginSuccess()"> Login </button>
+                            <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm"> Register </button> 
+                            <div id="ModalLoginForm" class="modal fade">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                         
+                                            <h1>Signup!</h1>
+                                            <form id="regform" role="form" method="POST" action="">
+                                                <input type="hidden" name="_token" value="">
+                                                <div class="form-group">
+                                                    <label class="control-label">First Name</label>
+                                                    <div>
+                                                        <input type="text" class="form-control input-lg" name="firstname" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Last Name</label>
+                                                    <div>
+                                                        <input type="text" class="form-control input-lg" name="lastname">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">E-Mail Address</label>
+                                                    <div>
+                                                        <input type="email" class="form-control input-lg" name="email" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Phone Number</label>
+                                                    <div>
+                                                        <input type="tel" class="form-control input-lg" name="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Password</label>
+                                                    <div>
+                                                        <input type="password" class="form-control input-lg" name="password">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div>
+                                                        <button type="submit" class="btn btn-primary btn-lg">
+                                                            Register
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+                          </div>  
+                          
+                        </div>  
+                      </div>  
+                    </div>  
+                  </div>  
+                </div>  
+ 
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2>Games</h2>
+        </div>
+        <div class="row">
+            <div class="container mt-3">
+            <div id="games" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#games" data-slide-to="0" class="active"></li>
+                  <li data-target="#games" data-slide-to="1"></li>
+                  <li data-target="#games" data-slide-to="2"></li>
+                  <li data-target="#games" data-slide-to="3"></li>
+                  <li data-target="#games" data-slide-to="4"></li>
+                  <li data-target="#games" data-slide-to="5"></li>
+                  <li data-target="#games" data-slide-to="6"></li>
+                  <li data-target="#games" data-slide-to="7"></li>
+                  <li data-target="#games" data-slide-to="8"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="media/blackjack.png" alt="blackjack" width="1200" height="675" onclick="window.open('media/blackjack2.jpg', '_blank');">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="media/Craps.png" alt="Craps" width="1200" height="675" onclick="window.open('media/craps2.jpg', '_blank');">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="media/jackpot.jpg" alt="blackjack" width="1200" height="675" onclick="window.open('media/jackpot2.jpg', '_blank');">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="media/Poker.jpg" alt="Poker" width="1200" height="675" onclick="window.open('media/Poker2.jpg', '_blank');">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="media/Roulette.jpg" alt="Roulette" width="1200" height="675" onclick="window.open('media/Roulette2.jpg', '_blank');">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#games" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#games" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+              </div>
+            </div>
+        </div>
+    </div>
+<div class="container">
+<div class="row">
+    <h2>Learn More About Us</h2>
+</div>
+    <div class="row">
+    <div id="aboutus" class="col-md-6">
+      <h3>About Us</h3>
+      <p>Caress an endless carousel of games in the palm of your hand and play casino with absolute ease from the comfort of your own device with Hold’em Casinos! </p>
+      <p>Play your favourite games such as Poker and Roulette or new favorites such as Craps! - prepare to be spoilt for choice with our selection of games!</p>
+    </div>
+
+    <div id="contactus" class="col-md-6">
+      <h3>Contact Us</h3>        
+      <p>Phone : 212 3546</p>
+      <p>Customer Support : help@holdemcas.com</p>
+      <p>Offices Address : 49 Triq San Bastjan Hal Qormi,Hal Qormi,,Malta</p>
+    </div>
+  </div>
+</div>
+<footer>
+    <p>© Hold’em Casinos, LLC. 2023. We love our Players!</p>
+  </footer>
+</body>
+</html>
